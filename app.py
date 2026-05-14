@@ -36,7 +36,7 @@ NEWSAPI_KEY = os.environ.get("NEWSAPI_KEY") or "d601447f4115481581d4e546839350d5
 # Point to your local folder
 
 
-MODEL_A = "./my_finetuned_finbert"
+MODEL_A = "ProsusAI/finbert"
 
 MODEL_B = os.environ.get("GEN_MODEL") or "distilbert-base-uncased-finetuned-sst-2-english"
 FETCH_PAGE_SIZE = int(os.environ.get("FETCH_PAGE_SIZE", "100"))
