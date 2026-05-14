@@ -21,14 +21,7 @@ from concurrent.futures import ThreadPoolExecutor
 logging.basicConfig(level=logging.INFO, format="%(asctime)s | %(levelname)s | %(message)s")
 logger = logging.getLogger(__name__)
 
-# Optional libs
-try:
-    import spacy
 
-    spacy_nlp = spacy.load("en_core_web_sm")
-except (ImportError, OSError):
-    logger.warning("spaCy not found or model not downloaded. Keyword extraction will be limited.")
-    spacy_nlp = None
 
 # ---------- config ----------
 NEWSAPI_KEY = os.environ.get("NEWSAPI_KEY") or "d601447f4115481581d4e546839350d5"
